@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dicas simples para cuidar da horta e economizar água.">
+  <title>Orientações · Horta Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir para o painel">
+      <span aria-hidden="true">🌱</span>
+      <span>Horta <strong>Inteligente</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Painel</a>
+      <a href="history.html">Histórico</a>
+      <a class="active" href="orientacoes.html" aria-current="page">Orientações</a>
+      <a href="educacional.html">Educacional</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="settings-button" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-menu" aria-label="Abrir configurações">
+        <span aria-hidden="true">⚙️</span>
+        <span>Configurações</span>
+      </button>
+      <button class="logout-button" id="logout-button" type="button" hidden>Sair</button>
+    </div>
+  </header>
+
+  <div class="settings-menu" id="settings-menu" hidden>
+    <button class="setting-option" id="text-size-button" type="button">Aumentar texto</button>
+    <label class="setting-option setting-select">
+      <span>Tema</span>
+      <select id="theme-select">
+        <option value="claro">Claro</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+      </select>
+    </label>
+    <button class="setting-option" id="show-logout-button" type="button">Mostrar “Sair”</button>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro--guidance">
+      <div class="section-wrap intro-wrap">
+        <p class="eyebrow"><span class="live-dot"></span> Cuidados essenciais</p>
+        <h1>Orientações para a horta</h1>
+        <p>Use estas dicas para manter as plantas saudáveis e evitar desperdício de água.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap info-grid page-section" aria-label="Orientações para cuidar da horta">
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">💧</span>
+        <h2>Regue com atenção</h2>
+        <p>Regue somente quando a umidade estiver baixa. Evite encharcar o solo, pois isso pode prejudicar as raízes.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">☀️</span>
+        <h2>Observe o ambiente</h2>
+        <p>Temperaturas muito altas podem deixar plantas mais vulneráveis. Verifique a condição geral da horta.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">🌿</span>
+        <h2>Cuide das folhas</h2>
+        <p>A presença de folhas amarelas ou murchas pode indicar que a planta precisa de atenção.</p>
+      </article>
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">♻️</span>
+        <h2>Use a água com cuidado</h2>
+        <p>Evite desperdícios e aproveite a irrigação automática somente quando houver necessidade.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Horta Inteligente</span>
+    <span>Projeto escolar · Dados simulados</span>
+  </footer>
+</body>
+</html>

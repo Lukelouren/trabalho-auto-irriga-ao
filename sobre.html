@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Informações sobre o objetivo e os integrantes do projeto escolar Horta Inteligente.">
+  <title>Sobre o projeto · Horta Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir para o painel">
+      <span aria-hidden="true">🌱</span>
+      <span>Horta <strong>Inteligente</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Painel</a>
+      <a href="history.html">Histórico</a>
+      <a href="orientacoes.html">Orientações</a>
+      <a href="educacional.html">Educacional</a>
+      <a class="active" href="sobre.html" aria-current="page">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="settings-button" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-menu" aria-label="Abrir configurações">
+        <span aria-hidden="true">⚙️</span>
+        <span>Configurações</span>
+      </button>
+      <button class="logout-button" id="logout-button" type="button" hidden>Sair</button>
+    </div>
+  </header>
+
+  <div class="settings-menu" id="settings-menu" hidden>
+    <button class="setting-option" id="text-size-button" type="button">Aumentar texto</button>
+    <label class="setting-option setting-select">
+      <span>Tema</span>
+      <select id="theme-select">
+        <option value="claro">Claro</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+      </select>
+    </label>
+    <button class="setting-option" id="show-logout-button" type="button">Mostrar “Sair”</button>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro--about">
+      <div class="section-wrap intro-wrap">
+        <p class="eyebrow"><span class="live-dot"></span> Projeto escolar</p>
+        <h1>Sobre o projeto</h1>
+        <p>Uma demonstração criada para apresentar conceitos de informática, sensores e automação.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap page-section about-grid" aria-label="Informações sobre o projeto escolar">
+      <article class="panel-card">
+        <p class="panel-kicker">Objetivo</p>
+        <h2>Mostrar uma horta inteligente</h2>
+        <p>O projeto apresenta como dados de umidade e temperatura podem ser usados para ajudar no cuidado de uma planta.</p>
+      </article>
+      <article class="panel-card">
+        <p class="panel-kicker">Integrantes</p>
+        <h2>Alunos</h2>
+        <ul class="people-list">
+          <li>Lucas</li>
+          <li>Pedro Balboa</li>
+          <li>Rychard</li>
+        </ul>
+      </article>
+      <article class="panel-card">
+        <p class="panel-kicker">Orientação</p>
+        <h2>Professores</h2>
+        <ul class="people-list">
+          <li>Rosalvo</li>
+          <li>Ana</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Horta Inteligente</span>
+    <span>Projeto escolar · 2º ano de Informática</span>
+  </footer>
+</body>
+</html>

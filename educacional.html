@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explicação simples sobre sensores e irrigação automática na horta inteligente.">
+  <title>Educacional · Horta Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir para o painel">
+      <span aria-hidden="true">🌱</span>
+      <span>Horta <strong>Inteligente</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Painel</a>
+      <a href="history.html">Histórico</a>
+      <a href="orientacoes.html">Orientações</a>
+      <a class="active" href="educacional.html" aria-current="page">Educacional</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="settings-button" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-menu" aria-label="Abrir configurações">
+        <span aria-hidden="true">⚙️</span>
+        <span>Configurações</span>
+      </button>
+      <button class="logout-button" id="logout-button" type="button" hidden>Sair</button>
+    </div>
+  </header>
+
+  <div class="settings-menu" id="settings-menu" hidden>
+    <button class="setting-option" id="text-size-button" type="button">Aumentar texto</button>
+    <label class="setting-option setting-select">
+      <span>Tema</span>
+      <select id="theme-select">
+        <option value="claro">Claro</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+      </select>
+    </label>
+    <button class="setting-option" id="show-logout-button" type="button">Mostrar “Sair”</button>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro--educational">
+      <div class="section-wrap intro-wrap">
+        <p class="eyebrow"><span class="live-dot"></span> Tecnologia e natureza</p>
+        <h1>Como funciona a horta inteligente</h1>
+        <p>Uma demonstração simples de como sensores e programação podem ajudar no cuidado das plantas.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap page-section educational-flow" aria-label="Explicação sobre sensores e irrigação automática">
+      <article class="educational-step">
+        <span class="step-number">1</span>
+        <div>
+          <h2>Sensor de umidade</h2>
+          <p>O sensor mede a quantidade de água presente no solo e envia essa informação para o sistema.</p>
+        </div>
+      </article>
+      <article class="educational-step">
+        <span class="step-number">2</span>
+        <div>
+          <h2>Processamento</h2>
+          <p>O programa compara o valor medido com um limite estabelecido para decidir se a planta precisa de água.</p>
+        </div>
+      </article>
+      <article class="educational-step">
+        <span class="step-number">3</span>
+        <div>
+          <h2>Irrigação automática</h2>
+          <p>Quando a umidade fica baixa, a irrigação pode ser ligada automaticamente. Quando não é necessária, permanece desligada.</p>
+        </div>
+      </article>
+      <article class="educational-note">
+        <h2>Na demonstração</h2>
+        <p>Os valores e as ações são simulados. Não há sensores conectados nem equipamento real sendo controlado.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Horta Inteligente</span>
+    <span>Projeto escolar · Dados simulados</span>
+  </footer>
+</body>
+</html>

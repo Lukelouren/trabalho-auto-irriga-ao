@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Histórico simulado das leituras de umidade e temperatura da horta inteligente.">
+  <title>Histórico · Horta Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir para o painel">
+      <span aria-hidden="true">🌱</span>
+      <span>Horta <strong>Inteligente</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Painel</a>
+      <a class="active" href="history.html" aria-current="page">Histórico</a>
+      <a href="orientacoes.html">Orientações</a>
+      <a href="educacional.html">Educacional</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="settings-button" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-menu" aria-label="Abrir configurações">
+        <span aria-hidden="true">⚙️</span>
+        <span>Configurações</span>
+      </button>
+      <button class="logout-button" id="logout-button" type="button" hidden>Sair</button>
+    </div>
+  </header>
+
+  <div class="settings-menu" id="settings-menu" hidden>
+    <button class="setting-option" id="text-size-button" type="button">Aumentar texto</button>
+    <label class="setting-option setting-select">
+      <span>Tema</span>
+      <select id="theme-select">
+        <option value="claro">Claro</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+      </select>
+    </label>
+    <button class="setting-option" id="show-logout-button" type="button">Mostrar “Sair”</button>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro--history">
+      <div class="section-wrap intro-wrap">
+        <p class="eyebrow"><span class="live-dot"></span> Leituras simuladas</p>
+        <h1>Histórico da horta</h1>
+        <p>Os dados abaixo são simulados e representam uma sequência de medições da horta inteligente.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap page-section" aria-labelledby="history-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Registro</p>
+          <h2 id="history-title">Evolução das leituras</h2>
+        </div>
+        <span class="status-pill"><span class="live-dot"></span> Dados simulados</span>
+      </div>
+
+      <div class="history-grid">
+        <article class="panel-card history-chart-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Gráfico</p>
+              <h3>Umidade do solo</h3>
+            </div>
+            <span id="history-range" class="panel-badge">Últimas 8 leituras</span>
+          </div>
+          <div class="readings-chart" id="readings-chart" role="img" aria-label="Gráfico das leituras simuladas da umidade do solo"></div>
+          <p class="chart-caption">Cada barra representa uma leitura simulada da umidade do solo.</p>
+        </article>
+
+        <article class="panel-card history-summary">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Resumo</p>
+              <h3>Valores atuais</h3>
+            </div>
+          </div>
+          <div class="summary-list">
+            <div><span>Umidade média</span><strong id="average-humidity">--</strong></div>
+            <div><span>Temperatura média</span><strong id="average-temperature">--</strong></div>
+            <div><span>Leituras registradas</span><strong id="readings-count">--</strong></div>
+          </div>
+        </article>
+      </div>
+
+      <article class="panel-card history-table-panel">
+        <div class="panel-header">
+          <div>
+            <p class="panel-kicker">Registro</p>
+            <h3>Leituras e ações</h3>
+          </div>
+          <button class="secondary-button history-clear-button" id="clear-history-button" type="button">Limpar histórico</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Data e hora</th>
+                <th scope="col">Umidade</th>
+                <th scope="col">Temperatura</th>
+                <th scope="col">Irrigação</th>
+                <th scope="col">Origem</th>
+              </tr>
+            </thead>
+            <tbody id="history-table-body">
+              <tr><td colspan="5" class="empty-state">Nenhum registro disponível.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Horta Inteligente</span>
+    <span>Projeto escolar · Dados simulados</span>
+  </footer>
+</body>
+</html>

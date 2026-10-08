@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel simulado da horta inteligente com leituras de umidade, temperatura e controle de irrigação.">
+  <title>Painel · Horta Inteligente</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ir para o painel">
+      <span aria-hidden="true">🌱</span>
+      <span>Horta <strong>Inteligente</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="../index.html" aria-current="page">Painel</a>
+      <a href="history.html">Histórico</a>
+      <a href="orientacoes.html">Orientações</a>
+      <a href="educacional.html">Educacional</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="settings-button" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-menu" aria-label="Abrir configurações">
+        <span aria-hidden="true">⚙️</span>
+        <span>Configurações</span>
+      </button>
+      <button class="logout-button" id="logout-button" type="button" hidden>Sair</button>
+    </div>
+  </header>
+
+  <div class="settings-menu" id="settings-menu" hidden>
+    <button class="setting-option" id="text-size-button" type="button">Aumentar texto</button>
+    <label class="setting-option setting-select">
+      <span>Tema</span>
+      <select id="theme-select">
+        <option value="claro">Claro</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+      </select>
+    </label>
+    <button class="setting-option" id="show-logout-button" type="button">Mostrar “Sair”</button>
+  </div>
+
+  <main>
+    <section class="page-intro page-intro--panel">
+      <div class="section-wrap intro-wrap">
+        <p class="eyebrow"><span class="live-dot"></span> Projeto de Informática · 2º ano</p>
+        <h1>Horta Inteligente</h1>
+        <p>Monitoramento simulado da umidade do solo, da temperatura e do sistema de irrigação.</p>
+        <p class="simulation-message"><strong>Simulação:</strong> não há equipamento conectado.</p>
+      </div>
+    </section>
+
+    <section class="dashboard section-wrap" aria-labelledby="dashboard-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Painel da horta</p>
+          <h2 id="dashboard-title">Leituras atuais</h2>
+        </div>
+        <span class="status-pill"><span class="live-dot"></span> Simulação ativa</span>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card">
+          <div class="metric-top"><span aria-hidden="true">💧</span><span>Umidade do solo</span></div>
+          <p class="metric-value"><span id="humidity-value">--</span><span class="metric-unit">%</span></p>
+          <div class="meter" role="meter" aria-label="Umidade do solo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="humidity-meter"><span id="humidity-bar"></span></div>
+          <p class="metric-note" id="humidity-note">Aguardando leitura.</p>
+        </article>
+
+        <article class="metric-card">
+          <div class="metric-top"><span aria-hidden="true">🌡️</span><span>Temperatura</span></div>
+          <p class="metric-value"><span id="temperature-value">--</span><span class="metric-unit">°C</span></p>
+          <p class="metric-note">Temperatura do ambiente</p>
+        </article>
+
+        <article class="metric-card">
+          <div class="metric-top"><span aria-hidden="true">🚿</span><span>Estado da irrigação</span></div>
+          <p class="status-value"><span class="status-dot" id="irrigation-dot"></span><span id="irrigation-value">Desligada</span></p>
+          <p class="metric-note" id="irrigation-note">A água não está passando.</p>
+        </article>
+      </div>
+
+      <div class="dashboard-lower">
+        <section class="chart-panel" aria-labelledby="chart-title">
+          <h3 id="chart-title">Umidade recente</h3>
+          <div class="readings-chart" id="readings-chart" role="img" aria-label="Gráfico das leituras recentes da umidade do solo"></div>
+          <p class="chart-caption">Cada barra representa uma leitura simulada.</p>
+        </section>
+
+        <section class="control-panel" aria-labelledby="control-title">
+          <h3 id="control-title">Controle da irrigação</h3>
+          <p class="control-description" id="control-description">O sistema automático liga a água quando a umidade fica abaixo de 35%.</p>
+          <button class="primary-button" id="irrigation-button" type="button">Ligar irrigação</button>
+          <button class="secondary-button" id="auto-button" type="button" hidden>Voltar ao automático</button>
+          <button class="refresh-button" id="refresh-button" type="button">Simular nova leitura</button>
+          <p class="manual-hint" id="manual-hint" aria-live="polite">A irrigação está sendo controlada pelos sensores.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Horta Inteligente</span>
+    <span>Projeto escolar · Dados simulados</span>
+  </footer>
+</body>
+</html>
